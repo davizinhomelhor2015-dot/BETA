@@ -1,0 +1,61 @@
+# ════════════════════════════════════════════════════════════════════
+# BACKUP AUTOMÁTICO — 100% dentro do GitHub, sem precisar configurar
+# NADA além de colocar este arquivo (e o script) no repositório.
+#
+# Não precisa de: senha do Firebase, token do GitHub (o Actions já dá um
+# sozinho, de graça, pra cada execução), conta na Vercel, nem nenhum outro
+# serviço externo.
+#
+# A cada 15 minutos, o dia todo, este workflow:
+#   1. Lê o horário configurado de CADA SETOR direto no Firebase (o mesmo
+#      banco que o site já usa — sem precisar de senha, porque o próprio
+#      site também lê e escreve nele sem fazer login).
+#   2. Pra cada setor cujo horário já chegou "agora" (fuso de Brasília) e
+#      que ainda não tem backup de hoje, busca os nomes e as fotos daquele
+#      setor e salva tudo dentro da pasta backups/<SETOR>/<DATA>/ deste
+#      mesmo repositório.
+#   3. Marca no Firebase que aquele setor já foi feito hoje (pra nunca
+#      duplicar) e sobe o commit sozinho, usando o token que o próprio
+#      GitHub Actions já fornece automaticamente (GITHUB_TOKEN).
+# ════════════════════════════════════════════════════════════════════
+name: Backup Automático por Setor
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}   # também dá pra rodar na mão pela aba "Actions"
+
+permissions:
+  contents: write   # precisa pra poder salvar os arquivos de volta no repo
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixa o repositório
+        uses: actions/checkout@v4
+
+      - name: Configura o Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Roda o backup
+        env:
+          # ⬇️ Já vem preenchido com a URL do SEU Firebase (a mesma que
+          # já está no index.html) — só troque se você mudar de banco.
+          FIREBASE_DB_URL: "https://comando-geral-98c87-default-rtdb.firebaseio.com"
+          FIREBASE_BASE_PATH: "efetivo_novo"
+        run: node .github/scripts/backup.mjs
+
+      - name: Sobe os arquivos gerados (se houve algum backup novo)
+        run: |
+          git config user.name "backup-automatico[bot]"
+          git config user.email "actions@github.com"
+          git add backups/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m "🗓 Backup automático $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          else
+            echo "Nada novo pra commitar desta vez."
+          fi
