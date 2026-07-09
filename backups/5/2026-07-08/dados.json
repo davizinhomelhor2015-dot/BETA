@@ -10,7 +10,7 @@
   ],
   "periodoLabel": "QUARTA (2026-07-08)",
   "totalNomes": 50,
-  "totalFotos": 1,
+  "totalFotos": 0,
   "efetivo": {
     "-OwkbMzR9NfnjssjoCmj": {
       "createdAt": "2026-07-05T04:51:46.053Z",
@@ -502,5 +502,5 @@
       "status": "🔴🔴🔴"
     }
   },
-  "geradoEm": "2026-07-09T05:58:10.974Z"
+  "geradoEm": "2026-07-09T06:16:11.957Z"
 }
