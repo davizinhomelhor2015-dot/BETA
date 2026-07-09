@@ -10,7 +10,7 @@
   ],
   "periodoLabel": "TERÇA (2026-07-07)",
   "totalNomes": 30,
-  "totalFotos": 3,
+  "totalFotos": 0,
   "efetivo": {
     "-OwpI9S5YRRGJ1M51rte": {
       "createdAt": "2026-07-06T02:40:43.921Z",
@@ -283,5 +283,5 @@
       "status": "🟡🟡🟡"
     }
   },
-  "geradoEm": "2026-07-09T00:53:17.655Z"
+  "geradoEm": "2026-07-09T02:01:32.154Z"
 }

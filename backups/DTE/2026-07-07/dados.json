@@ -9,7 +9,7 @@
     }
   ],
   "periodoLabel": "TERÇA (2026-07-07)",
-  "totalNomes": 24,
+  "totalNomes": 22,
   "totalFotos": 0,
   "efetivo": {
     "-Out1jLVJuBEmnJbgaQ1": {
@@ -19,7 +19,7 @@
       "promo": false,
       "qra": "RDZINHO OLIVEIRA",
       "rank": "MAJOR GENERAL",
-      "status": "🟢🟢🟢"
+      "status": "🟡🟢🟡"
     },
     "-Out1jb7smsgEsWP3yU0": {
       "createdAt": "2026-06-11T23:36:04.999Z",
@@ -66,15 +66,6 @@
       "rank": "MAJOR",
       "status": "🟢🟡🟡"
     },
-    "-Owcts9A6uBxeNMFZgsv": {
-      "createdAt": "2026-07-03T16:54:48.400Z",
-      "ferias": false,
-      "lider": false,
-      "promo": false,
-      "qra": "Azazel Singer",
-      "rank": "1°SARGENTO",
-      "status": "🟢🟢🟢"
-    },
     "-Owculy6Lva8Uj3_Mt6w": {
       "createdAt": "2026-07-03T16:58:45.207Z",
       "ferias": false,
@@ -82,7 +73,7 @@
       "promo": false,
       "qra": "Adryan dygerasscott",
       "rank": "1°SARGENTO",
-      "status": "🟢🟢🟢"
+      "status": "🟢🟢🟡"
     },
     "-OwcuqTgPqNvoLguu6MR": {
       "createdAt": "2026-07-03T16:59:03.677Z",
@@ -100,7 +91,7 @@
       "promo": false,
       "qra": "Sou Lunar",
       "rank": "1°SARGENTO",
-      "status": "🟢🟡🟡"
+      "status": "🟢🟢🟡"
     },
     "-OwcwBDPuiI2OJ1JyfOd": {
       "createdAt": "2026-07-03T17:04:54.880Z",
@@ -109,7 +100,7 @@
       "promo": false,
       "qra": "Rebelde spring",
       "rank": "1°SARGENTO",
-      "status": "🟡🟡🟡"
+      "status": "🟢🟢🔴"
     },
     "-OwcwPZebOOA_K4ZXPoG": {
       "createdAt": "2026-07-03T17:05:53.649Z",
@@ -145,16 +136,7 @@
       "promo": false,
       "qra": "Lara Spring",
       "rank": "RECRUTA",
-      "status": "🟡🟡🟡"
-    },
-    "-OwoDOCjMZNWSiNL74zZ": {
-      "createdAt": "2026-07-05T21:40:16.197Z",
-      "ferias": false,
-      "lider": false,
-      "promo": false,
-      "qra": "Sou eclipse",
-      "rank": "SOLDADO",
-      "status": "🟢🟢🟡"
+      "status": "🟢🟡🟡"
     },
     "-Owp1ekaTFCmdkXnQbti": {
       "createdAt": "2026-07-06T01:28:39.562Z",
@@ -163,7 +145,7 @@
       "promo": false,
       "qra": "John wickspw",
       "rank": "SARGENTO",
-      "status": "🟡🟢🟢"
+      "status": "🟢🟢🟢"
     },
     "-Owu0hrTkflegqhz8REg": {
       "createdAt": "2026-07-07T00:42:36.580Z",
@@ -172,7 +154,7 @@
       "promo": false,
       "qra": "Sr Buzerra",
       "rank": "SOLDADO",
-      "status": "🟢🟡🟢"
+      "status": "🟡🟡🟢"
     },
     "-Owu0vcykclP_fnmewHg": {
       "createdAt": "2026-07-07T00:43:32.998Z",
@@ -190,7 +172,7 @@
       "promo": false,
       "qra": "Connor cj",
       "rank": "SOLDADO",
-      "status": "🟢🟢🟡"
+      "status": "🟢🟢🟢"
     },
     "-OwzYKNaYULR5kao10xH": {
       "createdAt": "2026-07-08T02:27:35.065Z",
@@ -217,7 +199,7 @@
       "promo": false,
       "qra": "Lua Hoffman",
       "rank": "RECRUTA",
-      "status": "🟡🟡🟡"
+      "status": "🟢🟡🟢"
     },
     "-Ox2G0E8bXgscSJBn1Gk": {
       "createdAt": "2026-07-08T19:46:02.834Z",
@@ -229,5 +211,5 @@
       "status": "🟢🟢🟢"
     }
   },
-  "geradoEm": "2026-07-09T00:53:17.655Z"
+  "geradoEm": "2026-07-09T02:01:32.154Z"
 }
