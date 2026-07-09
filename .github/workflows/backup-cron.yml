@@ -1,17 +1,17 @@
+# ════════════════════════════════════════════════════════════════════
+# BACKUP AUTOMÁTICO — 100% dentro do GitHub, sem precisar configurar
+# NADA além de colocar este arquivo (e o script) no repositório.
+#
+# Disparado externamente pelo cron-job.org (ou manualmente pela aba
+# "Actions"). O script decide sozinho, a cada execução, qual setor já
+# chegou no horário e ainda não tem backup de hoje.
+# ════════════════════════════════════════════════════════════════════
 name: Backup Automático por Setor
 on:
   workflow_dispatch: {}   # disparado pelo cron-job.org (ou manualmente pela aba "Actions")
-
-# ⬇️ NOVO: nunca deixa dois backups rodarem ao mesmo tempo.
-# Se um novo disparo chegar enquanto outro ainda roda, ele espera o anterior
-# terminar (em vez de brigar pelo git push). cancel-in-progress:false garante
-# que nenhum backup em andamento seja cancelado no meio.
-concurrency:
-  group: backup-automatico
-  cancel-in-progress: false
-
+ 
 permissions:
-  contents: write
+  contents: write   # precisa pra poder salvar os arquivos de volta no repo
 jobs:
   backup:
     runs-on: ubuntu-latest
@@ -34,7 +34,6 @@ jobs:
           git add backups/ || true
           if ! git diff --cached --quiet; then
             git commit -m "🗓 Backup automático $(date -u +'%Y-%m-%d %H:%M UTC')"
-            # ⬇️ NOVO: se alguém commitou nesse meio-tempo, rebaseia antes de empurrar
             git pull --rebase --autostash origin "$(git rev-parse --abbrev-ref HEAD)" || true
             git push
           else
