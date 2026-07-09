@@ -1,0 +1,233 @@
+{
+  "setor": "DTE",
+  "dataReferencia": "2026-07-07",
+  "dataReferenciaFim": "2026-07-07",
+  "diasCobertos": [
+    {
+      "nome": "TERÇA",
+      "data": "2026-07-07"
+    }
+  ],
+  "periodoLabel": "TERÇA (2026-07-07)",
+  "totalNomes": 24,
+  "totalFotos": 0,
+  "efetivo": {
+    "-Out1jLVJuBEmnJbgaQ1": {
+      "createdAt": "2026-06-11T23:36:03.935Z",
+      "ferias": false,
+      "lider": true,
+      "promo": false,
+      "qra": "RDZINHO OLIVEIRA",
+      "rank": "MAJOR GENERAL",
+      "status": "🟢🟢🟢"
+    },
+    "-Out1jb7smsgEsWP3yU0": {
+      "createdAt": "2026-06-11T23:36:04.999Z",
+      "ferias": false,
+      "lider": true,
+      "promo": false,
+      "qra": "MR MECCA",
+      "rank": "MAJOR GENERAL",
+      "status": "🟢🟢🟢"
+    },
+    "-Out1jfJ8eaEBrsvFpPF": {
+      "createdAt": "2026-06-11T23:36:05.267Z",
+      "ferias": false,
+      "lider": true,
+      "promo": false,
+      "qra": "SR PERSEUS",
+      "rank": "MAJOR GENERAL",
+      "status": "🟢🟢🟢"
+    },
+    "-Out1jjkMn7MjRYc7OJJ": {
+      "createdAt": "2026-06-11T23:36:05.551Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "OO LUQUETAA",
+      "rank": "CORONEL",
+      "status": "🟢🟢🟢"
+    },
+    "-Out1jqSoV40f4xcTzJy": {
+      "createdAt": "2026-06-11T23:36:05.980Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "SRA BELLATRIX",
+      "rank": "MAJOR",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov2QzLMPv2DUiHQdsEo": {
+      "createdAt": "2026-06-14T00:02:35.006Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "MARCK BOLTZ",
+      "rank": "MAJOR",
+      "status": "🟢🟡🟡"
+    },
+    "-Owcts9A6uBxeNMFZgsv": {
+      "createdAt": "2026-07-03T16:54:48.400Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Azazel Singer",
+      "rank": "1°SARGENTO",
+      "status": "🟢🟢🟢"
+    },
+    "-Owculy6Lva8Uj3_Mt6w": {
+      "createdAt": "2026-07-03T16:58:45.207Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Adryan dygerasscott",
+      "rank": "1°SARGENTO",
+      "status": "🟢🟢🟢"
+    },
+    "-OwcuqTgPqNvoLguu6MR": {
+      "createdAt": "2026-07-03T16:59:03.677Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Brycen Alves",
+      "rank": "SARGENTO",
+      "status": "🟢🟡🟡"
+    },
+    "-OwcvswGG0cAIT9xhqrd": {
+      "createdAt": "2026-07-03T17:03:35.895Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Sou Lunar",
+      "rank": "1°SARGENTO",
+      "status": "🟢🟡🟡"
+    },
+    "-OwcwBDPuiI2OJ1JyfOd": {
+      "createdAt": "2026-07-03T17:04:54.880Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Rebelde spring",
+      "rank": "1°SARGENTO",
+      "status": "🟡🟡🟡"
+    },
+    "-OwcwPZebOOA_K4ZXPoG": {
+      "createdAt": "2026-07-03T17:05:53.649Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Malvadao Baiano",
+      "rank": "SARGENTO",
+      "status": "🟢🟢🟡"
+    },
+    "-Owcwdfy491osQyF1daJ": {
+      "createdAt": "2026-07-03T17:06:55.557Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Brayann Oconner",
+      "rank": "1°SARGENTO",
+      "status": "🟢🟡🟢"
+    },
+    "-OwcwkwT0obQTkIv_F4_": {
+      "createdAt": "2026-07-03T17:07:25.284Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Baiano Caldwell",
+      "rank": "SARGENTO",
+      "status": "🟢🟢🟡"
+    },
+    "-Owcx3rg6FOu80uuyg0z": {
+      "createdAt": "2026-07-03T17:08:46.898Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Lara Spring",
+      "rank": "RECRUTA",
+      "status": "🟡🟡🟡"
+    },
+    "-OwoDOCjMZNWSiNL74zZ": {
+      "createdAt": "2026-07-05T21:40:16.197Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Sou eclipse",
+      "rank": "SOLDADO",
+      "status": "🟢🟢🟡"
+    },
+    "-Owp1ekaTFCmdkXnQbti": {
+      "createdAt": "2026-07-06T01:28:39.562Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "John wickspw",
+      "rank": "SARGENTO",
+      "status": "🟡🟢🟢"
+    },
+    "-Owu0hrTkflegqhz8REg": {
+      "createdAt": "2026-07-07T00:42:36.580Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Sr Buzerra",
+      "rank": "SOLDADO",
+      "status": "🟢🟡🟢"
+    },
+    "-Owu0vcykclP_fnmewHg": {
+      "createdAt": "2026-07-07T00:43:32.998Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Scott triston",
+      "rank": "SOLDADO",
+      "status": "🟢🟢🟢"
+    },
+    "-Owu11PYRBPjWfEBnPeK": {
+      "createdAt": "2026-07-07T00:44:00.747Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Connor cj",
+      "rank": "SOLDADO",
+      "status": "🟢🟢🟡"
+    },
+    "-OwzYKNaYULR5kao10xH": {
+      "createdAt": "2026-07-08T02:27:35.065Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Alleson rp",
+      "rank": "RECRUTA",
+      "status": "🟡🟡🟡"
+    },
+    "-OwzaiNEsGKvvQOZkEPi": {
+      "createdAt": "2026-07-08T02:42:23.879Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Sou júpiter",
+      "rank": "RECRUTA",
+      "status": "🟢🟢🟢"
+    },
+    "-Ox1OwTiqORzahd7WWNL": {
+      "createdAt": "2026-07-08T15:45:25.407Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Lua Hoffman",
+      "rank": "RECRUTA",
+      "status": "🟡🟡🟡"
+    },
+    "-Ox2G0E8bXgscSJBn1Gk": {
+      "createdAt": "2026-07-08T19:46:02.834Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Mr  park",
+      "rank": "RECRUTA",
+      "status": "🟢🟢🟢"
+    }
+  },
+  "geradoEm": "2026-07-09T00:53:17.655Z"
+}

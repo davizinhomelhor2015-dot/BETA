@@ -1,0 +1,240 @@
+{
+  "setor": "COE",
+  "dataReferencia": "2026-07-07",
+  "dataReferenciaFim": "2026-07-07",
+  "diasCobertos": [
+    {
+      "nome": "TERÇA",
+      "data": "2026-07-07"
+    }
+  ],
+  "periodoLabel": "TERÇA (2026-07-07)",
+  "totalNomes": 25,
+  "totalFotos": 0,
+  "efetivo": {
+    "-Ov0lrHZXz1-uQEGO2nC": {
+      "createdAt": "2026-06-13T16:18:54.774Z",
+      "lider": false,
+      "promo": false,
+      "qra": "HUNTER CHALTON",
+      "rank": "MAJOR GENERAL",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrKA84DaicY-wvqJ": {
+      "createdAt": "2026-06-13T16:18:54.942Z",
+      "lider": false,
+      "promo": false,
+      "qra": "SRANTONIO RIBEIRO",
+      "rank": "MAJOR GENERAL",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrMuVz_623oh3hwu": {
+      "createdAt": "2026-06-13T16:18:55.115Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "DR BRANCO",
+      "rank": "MAJOR GENERAL",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrPZfSU4a2X1F0kw": {
+      "createdAt": "2026-06-13T16:18:55.287Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "SR TOCCHETTO",
+      "rank": "CAPITÃO",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrSA4ykCbWNb5caS": {
+      "createdAt": "2026-06-13T16:18:55.453Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "EL VAPO",
+      "rank": "TENENTE",
+      "status": "🔴🔴🔴"
+    },
+    "-Ov0lrUjHuBtWXzVrnov": {
+      "createdAt": "2026-06-13T16:18:55.618Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "DEVAIR CARDOSO",
+      "rank": "CORONEL",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrXK8KiEGf_yFdos": {
+      "createdAt": "2026-06-13T16:18:55.784Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "SRA LOPES",
+      "rank": "TENENTE",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lr_-GeTh_u3TT17S": {
+      "createdAt": "2026-06-13T16:18:55.955Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "NANDO FALCONY",
+      "rank": "TENENTE",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrbaLbD1FIgHTnY6": {
+      "createdAt": "2026-06-13T16:18:56.121Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "CAPUCHO RD",
+      "rank": "CAPITÃO",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrjRTOjc1WkixFUZ": {
+      "createdAt": "2026-06-13T16:18:56.623Z",
+      "ferias": true,
+      "lider": false,
+      "promo": false,
+      "qra": "OSMAR BRUCE",
+      "rank": "CAPITÃO",
+      "status": "🟢🟡🟡"
+    },
+    "-Ov0lrofHL69H12ZSaau": {
+      "createdAt": "2026-06-13T16:18:56.958Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "Fake Stark",
+      "rank": "CAPITÃO",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrrHNzz58C-p_t9_": {
+      "createdAt": "2026-06-13T16:18:57.124Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "NATHY JARDIM",
+      "rank": "SARGENTO MOR",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov0lrwYip-GBVp0S_Wx": {
+      "createdAt": "2026-06-13T16:18:57.462Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "JOSUÉ MACHADO",
+      "rank": "1°SARGENTO",
+      "status": "🟢🟢🟢"
+    },
+    "-Ov2SS2UoAvLh9c1KTj3": {
+      "createdAt": "2026-06-14T00:08:59.600Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "NATAN DAWKINS",
+      "rank": "CAPITÃO",
+      "status": "🟢🟢🟢"
+    },
+    "-Owcs7DBKjzedQkk3qQ2": {
+      "createdAt": "2026-07-03T16:47:10.437Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "LIONEL MANOBROWN",
+      "rank": "SARGENTO MOR",
+      "status": "🟢🟡🟢"
+    },
+    "-OwcsMz2ymoYvqPZTXfM": {
+      "createdAt": "2026-07-03T16:48:15.005Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "LEYDSON VERAS",
+      "rank": "TENENTE",
+      "status": "🟢🟢🟢"
+    },
+    "-OwcsTme2ZXjmBSPSX9l": {
+      "createdAt": "2026-07-03T16:48:42.884Z",
+      "ferias": false,
+      "lider": false,
+      "promo": true,
+      "qra": "SRTA MONDRICH",
+      "rank": "TENENTE",
+      "status": "🟢🟢🟢"
+    },
+    "-Owcsc62oC50NejwzXeN": {
+      "createdAt": "2026-07-03T16:49:21.054Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "DEMETRY ODIE",
+      "rank": "SOLDADO",
+      "status": "🟢🟢🟢"
+    },
+    "-OwpkUB4SnFJmhcJMaPe": {
+      "createdAt": "2026-07-06T04:48:51.075Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "KODAI RAYFORD",
+      "rank": "SARGENTO",
+      "status": "🟢🟢🟢"
+    },
+    "-Owu2wqrFzU_zJEQCOVN": {
+      "createdAt": "2026-07-07T00:52:22.152Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "GUMARAESS SANTOS",
+      "rank": "RECRUTA",
+      "status": "🟡🟢🔴"
+    },
+    "-OwuRqfcaQIlE_zkeile": {
+      "createdAt": "2026-07-07T02:41:09.662Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "NEGO ZAGO",
+      "rank": "CAPITÃO",
+      "status": "🟢🟢🟢"
+    },
+    "-OwucqwlGP6NzUK_Ov8B": {
+      "createdAt": "2026-07-07T03:33:37.275Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "SR MAIK",
+      "rank": "SOLDADO",
+      "status": "🟡🟢🟢"
+    },
+    "-Owud2nK0NqlZkodeXAc": {
+      "createdAt": "2026-07-07T03:34:29.919Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "HASDRUBAL WINDSOR",
+      "rank": "RECRUTA",
+      "status": "🟡🔴🔴"
+    },
+    "-Owud8F10lsrEpb9j7we": {
+      "createdAt": "2026-07-07T03:34:52.237Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "DOMM ED",
+      "rank": "SOLDADO",
+      "status": "🟡🟢🟢"
+    },
+    "-Owz_ToDIrfcbdBEJzD-": {
+      "createdAt": "2026-07-08T02:36:58.172Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "RN CAOS",
+      "rank": "RECRUTA",
+      "status": "🟡🟡🔴"
+    }
+  },
+  "geradoEm": "2026-07-09T00:53:17.655Z"
+}
