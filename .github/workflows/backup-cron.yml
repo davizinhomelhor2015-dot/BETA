@@ -26,7 +26,24 @@ jobs:
         env:
           FIREBASE_DB_URL: "https://comando-geral-98c87-default-rtdb.firebaseio.com"
           FIREBASE_BASE_PATH: "efetivo_novo"
-        run: node .github/scripts/backup.mjs
+        run: |
+          # Acha o script de backup automaticamente, tolerando o nome
+          # (backup.mjs, backup_final.mjs, etc.). Procura primeiro na pasta
+          # padrão e, se não achar, em qualquer lugar do repositório.
+          FILE=""
+          for f in .github/scripts/backup.mjs .github/scripts/backup_final.mjs; do
+            if [ -f "$f" ]; then FILE="$f"; break; fi
+          done
+          if [ -z "$FILE" ]; then
+            FILE=$(find . -type f -name 'backup*.mjs' -not -path './node_modules/*' | head -1)
+          fi
+          if [ -z "$FILE" ]; then
+            echo "❌ Não encontrei nenhum arquivo backup*.mjs no repositório."
+            echo "   Coloque o script em .github/scripts/ (nome sugerido: backup.mjs)."
+            exit 1
+          fi
+          echo "▶ Rodando: $FILE"
+          node "$FILE"
       - name: Sobe os arquivos gerados (se houve algum backup novo)
         run: |
           git config user.name "backup-automatico[bot]"
@@ -39,3 +56,9 @@ jobs:
           else
             echo "Nada novo pra commitar desta vez."
           fi
+ 
+
+
+
+
+
