@@ -9,7 +9,7 @@
     }
   ],
   "periodoLabel": "TERÇA (2026-07-07)",
-  "totalNomes": 29,
+  "totalNomes": 32,
   "totalFotos": 0,
   "efetivo": {
     "-OwGX5Vt_CLlQh1py-oF": {
@@ -280,7 +280,34 @@
       "qra": "CAIN MONTCLAIN",
       "rank": "RECRUTA",
       "status": "🟡🟢🟢"
+    },
+    "-Ox3h9-bRN4ZeGcmbWeq": {
+      "createdAt": "2026-07-09T02:28:35.958Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "SEGURANÇA NANDINHO",
+      "rank": "RECRUTA",
+      "status": "🔴🔴🔴"
+    },
+    "-Ox3hN-WUzN4qDkOKSES": {
+      "createdAt": "2026-07-09T02:29:33.297Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "EDIZ ROCKY",
+      "rank": "RECRUTA",
+      "status": "🔴🔴🔴"
+    },
+    "-Ox3hT5f2KGFoCJewE4l": {
+      "createdAt": "2026-07-09T02:29:58.269Z",
+      "ferias": false,
+      "lider": false,
+      "promo": false,
+      "qra": "AUSTON SHON",
+      "rank": "RECRUTA",
+      "status": "🔴🔴🔴"
     }
   },
-  "geradoEm": "2026-07-09T02:15:20.292Z"
+  "geradoEm": "2026-07-09T02:30:32.632Z"
 }
