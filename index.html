@@ -3892,12 +3892,17 @@ W.verBackupAuto=async(setor,caminho,slot)=>{
     if(erroFotos){
       fotosHtml=`<div style="margin-top:1.2rem;padding:.7rem .9rem;border-radius:10px;background:rgba(240,168,0,.08);border:1px solid rgba(240,168,0,.3);color:var(--gold2);font-size:.78rem">⚠️ ${esc(erroFotos)}</div>`;
     } else if(fotosVisiveis.length){
-      fotosHtml=`
-        <h4 style="font-size:.76rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin:1.2rem 0 .6rem">📷 Fotos do período — ${fotosVisiveis.length}${ocultas.size?` <span style="color:var(--text3);font-weight:400">(${ocultas.size} removida(s) pelo admin)</span>`:""}</h4>
+      // Separa fotos do período deste backup das que sobraram de dias
+      // anteriores (varridas automaticamente pra não se perder, mas que
+      // não pertencem a este período — mostradas à parte pra não parecer
+      // que "não foram apagadas")
+      const doPeriodo=fotosVisiveis.filter(f=>!fotosMeta[f.nome]?.atrasada);
+      const atrasadas=fotosVisiveis.filter(f=>fotosMeta[f.nome]?.atrasada);
+      const gradeFotos=(lista,offset)=>`
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.7rem">
-          ${fotosVisiveis.map((f,i)=>`
+          ${lista.map((f,i)=>`
           <div style="position:relative;border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--border2);background:var(--bg)">
-            <img src="${esc(f.url)}" loading="lazy" style="width:100%;height:110px;object-fit:cover;display:block;cursor:pointer" onclick="W._abrirFotoBackup(${i})" onerror="this.parentElement.innerHTML='<div style=&quot;padding:.8rem;font-size:.68rem;color:var(--red2)&quot;>❌ Não consegui carregar<br><a href=&quot;'+this.src+'&quot; target=&quot;_blank&quot; style=&quot;color:var(--accent2)&quot;>abrir direto</a></div>'">
+            <img src="${esc(f.url)}" loading="lazy" style="width:100%;height:110px;object-fit:cover;display:block;cursor:pointer" onclick="W._abrirFotoBackup(${offset+i})" onerror="this.parentElement.innerHTML='<div style=&quot;padding:.8rem;font-size:.68rem;color:var(--red2)&quot;>❌ Não consegui carregar<br><a href=&quot;'+this.src+'&quot; target=&quot;_blank&quot; style=&quot;color:var(--accent2)&quot;>abrir direto</a></div>'">
             ${admLocal&&slot?`<button class="btn btn-sm btn-danger" style="position:absolute;top:.3rem;right:.3rem;padding:.15rem .4rem;font-size:.65rem" title="Remover esta foto do backup (só o admin vê este botão)" onclick="event.stopPropagation();W.removerFotoBackup('${setor}','${slot}','${esc(f.nome)}')">🗑</button>`:""}
             <div style="padding:.32rem .45rem;font-size:.62rem;color:var(--text3);line-height:1.4">
               ${fotosMeta[f.nome]&&fotosMeta[f.nome].por?`<div style="color:var(--text2);font-weight:700">👤 ${esc(fotosMeta[f.nome].por)}</div>`:""}
@@ -3906,7 +3911,14 @@ W.verBackupAuto=async(setor,caminho,slot)=>{
             </div>
           </div>`).join("")}
         </div>`;
-      W._bkpFotosTemp=fotosVisiveis.map(f=>({img:f.url,enviadoPor:"",enviadoEm:""}));
+      fotosHtml=`
+        <h4 style="font-size:.76rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin:1.2rem 0 .6rem">📷 Fotos do período — ${doPeriodo.length}${ocultas.size?` <span style="color:var(--text3);font-weight:400">(${ocultas.size} removida(s) pelo admin)</span>`:""}</h4>
+        ${doPeriodo.length?gradeFotos(doPeriodo,0):`<div style="font-size:.76rem;color:var(--text3)">Nenhuma foto deste período.</div>`}
+        ${atrasadas.length?`
+        <h4 style="font-size:.76rem;color:var(--gold2);text-transform:uppercase;letter-spacing:.08em;margin:1.4rem 0 .6rem">⏳ Fotos atrasadas de dias anteriores — ${atrasadas.length}</h4>
+        <div style="font-size:.7rem;color:var(--text3);margin-bottom:.6rem">Enviadas em dias que não tiveram backup a tempo — recuperadas aqui pra não se perderem, mas não fazem parte do período "${esc(dados.periodoLabel||dados.dataReferencia)}".</div>
+        ${gradeFotos(atrasadas,doPeriodo.length)}`:""}`;
+      W._bkpFotosTemp=fotosVisiveis.map(f=>({img:f.url,enviadoPor:(fotosMeta[f.nome]&&fotosMeta[f.nome].por)||"",enviadoEm:(fotosMeta[f.nome]&&fotosMeta[f.nome].em)||""}));
     } else {
       fotosHtml=`<div style="margin-top:1.2rem;font-size:.76rem;color:var(--text3)">📷 Nenhuma foto ${ocultas.size?"visível":"neste backup"}${ocultas.size?` (${ocultas.size} removida(s) pelo admin)`:""}.</div>`;
     }
