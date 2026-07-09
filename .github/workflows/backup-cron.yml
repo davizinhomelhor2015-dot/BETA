@@ -1,31 +1,17 @@
-# ════════════════════════════════════════════════════════════════════
-# BACKUP AUTOMÁTICO — 100% dentro do GitHub, sem precisar configurar
-# NADA além de colocar este arquivo (e o script) no repositório.
-#
-# Não precisa de: senha do Firebase, token do GitHub (o Actions já dá um
-# sozinho, de graça, pra cada execução), conta na Vercel, nem nenhum outro
-# serviço externo.
-#
-# Disparado externamente pelo cron-job.org a cada 15 minutos (mais
-# confiável que o agendamento nativo do GitHub, que pode atrasar horas).
-#
-# A cada execução, este workflow:
-#   1. Lê o horário configurado de CADA SETOR direto no Firebase (o mesmo
-#      banco que o site já usa — sem precisar de senha, porque o próprio
-#      site também lê e escreve nele sem fazer login).
-#   2. Pra cada setor cujo horário já chegou "agora" (fuso de Brasília) e
-#      que ainda não tem backup de hoje, busca os nomes e as fotos daquele
-#      setor e salva tudo dentro da pasta backups/<SETOR>/<DATA>/ deste
-#      mesmo repositório.
-#   3. Marca no Firebase que aquele setor já foi feito hoje (pra nunca
-#      duplicar) e sobe o commit sozinho, usando o token que o próprio
-#      GitHub Actions já fornece automaticamente (GITHUB_TOKEN).
-# ════════════════════════════════════════════════════════════════════
 name: Backup Automático por Setor
 on:
   workflow_dispatch: {}   # disparado pelo cron-job.org (ou manualmente pela aba "Actions")
+
+# ⬇️ NOVO: nunca deixa dois backups rodarem ao mesmo tempo.
+# Se um novo disparo chegar enquanto outro ainda roda, ele espera o anterior
+# terminar (em vez de brigar pelo git push). cancel-in-progress:false garante
+# que nenhum backup em andamento seja cancelado no meio.
+concurrency:
+  group: backup-automatico
+  cancel-in-progress: false
+
 permissions:
-  contents: write   # precisa pra poder salvar os arquivos de volta no repo
+  contents: write
 jobs:
   backup:
     runs-on: ubuntu-latest
@@ -38,8 +24,6 @@ jobs:
           node-version: 20
       - name: Roda o backup
         env:
-          # ⬇️ Já vem preenchido com a URL do SEU Firebase (a mesma que
-          # já está no index.html) — só troque se você mudar de banco.
           FIREBASE_DB_URL: "https://comando-geral-98c87-default-rtdb.firebaseio.com"
           FIREBASE_BASE_PATH: "efetivo_novo"
         run: node .github/scripts/backup.mjs
@@ -50,6 +34,8 @@ jobs:
           git add backups/ || true
           if ! git diff --cached --quiet; then
             git commit -m "🗓 Backup automático $(date -u +'%Y-%m-%d %H:%M UTC')"
+            # ⬇️ NOVO: se alguém commitou nesse meio-tempo, rebaseia antes de empurrar
+            git pull --rebase --autostash origin "$(git rev-parse --abbrev-ref HEAD)" || true
             git push
           else
             echo "Nada novo pra commitar desta vez."
