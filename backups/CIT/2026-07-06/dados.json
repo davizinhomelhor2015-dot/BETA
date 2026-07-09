@@ -1,7 +1,7 @@
 {
   "setor": "CIT",
   "dataReferencia": "2026-07-06",
-  "dataReferenciaFim": "2026-07-08",
+  "dataReferenciaFim": "2026-07-07",
   "diasCobertos": [
     {
       "nome": "SEGUNDA",
@@ -10,15 +10,11 @@
     {
       "nome": "TERÇA",
       "data": "2026-07-07"
-    },
-    {
-      "nome": "QUARTA",
-      "data": "2026-07-08"
     }
   ],
-  "periodoLabel": "SEGUNDA a QUARTA (2026-07-06 a 2026-07-08)",
+  "periodoLabel": "SEGUNDA a TERÇA (2026-07-06 a 2026-07-07)",
   "totalNomes": 46,
-  "totalFotos": 1,
+  "totalFotos": 0,
   "efetivo": {
     "-OwEaOsd4IyYpZErtk3H": {
       "createdAt": "2026-06-28T18:59:13.537Z",
@@ -233,8 +229,9 @@
       "ferias": false,
       "lider": false,
       "promo": false,
+      "promovidoSgtMorEm": "2026-07-09T00:58:23.841Z",
       "qra": "ALMEIDA BRENO",
-      "rank": "RECRUTA",
+      "rank": "SARGENTO MOR",
       "status": "🔴🔴"
     },
     "-OwkbYtgHFU5iEdOk5CL": {
@@ -447,7 +444,7 @@
       "createdAt": "2026-07-08T08:42:07.677Z",
       "discord": "444",
       "farda": true,
-      "fardaEm": "2026-07-08T08:42:07.677Z",
+      "fardaEm": "2026-07-09T00:56:23.338Z",
       "ferias": false,
       "lider": false,
       "promo": false,
@@ -456,5 +453,5 @@
       "status": "🔴🔴🔴"
     }
   },
-  "geradoEm": "2026-07-08T11:30:33.486Z"
+  "geradoEm": "2026-07-09T02:15:20.292Z"
 }
