@@ -9,7 +9,7 @@
 name: Backup Automático por Setor
 on:
   workflow_dispatch: {}   # disparado pelo cron-job.org (ou manualmente pela aba "Actions")
- 
+
 permissions:
   contents: write   # precisa pra poder salvar os arquivos de volta no repo
 jobs:
@@ -56,9 +56,3 @@ jobs:
           else
             echo "Nada novo pra commitar desta vez."
           fi
- 
-
-
-
-
-
